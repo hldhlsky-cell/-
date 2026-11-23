@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: guestbook
-          image: ghcr.io/inner-container/guestbook:v1
+          image: gcr.io/google-samples/gb-frontend:v5
           ports:
             - containerPort: 5000
           envFrom:
