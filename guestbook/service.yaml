@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: guestbook
+spec:
+  type: ClusterIP   # 또는 NodePort, LoadBalancer 등 환경에 맞게 설정
+  selector:
+    app: guestbook
+  ports:
+    - name: http    # 포트 이름 필수 지정 (에러 방지)
+      port: 80
+      targetPort: 5000

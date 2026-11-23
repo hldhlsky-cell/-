@@ -1,0 +1,15 @@
+# app.py
+
+REDIS_HOST = os.environ.get("REDIS_HOST")
+...
+
+
+
+
+
+
+
+
+if REDIS_HOST:
+ELSE: ...
+
