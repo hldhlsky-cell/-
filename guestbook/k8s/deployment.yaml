@@ -13,32 +13,7 @@ spec:
         app: guestbook
     spec:
       containers:
-        - name: guestbook
-          image: gcr.io/google-samples/gb-frontend:v5
-          ports:
-            - containerPort: 5000
-          envFrom:
-            - configMapRef:
-                name: guestbook-config
-            - secretRef:
-                name: guestbook-secret
-          resources:
-            requests:
-              memory: "64Mi"
-              cpu: "100m"
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
-          livenessProbe:
-            httpGet:
-              path: /healthz
-              port: 5000
-            initialDelaySeconds: 5
-            periodSeconds: 10
-            failureThreshold: 3
-          readinessProbe:
-            httpGet:
-              path: /readyz
-              port: 5000
-            initialDelaySeconds: 3
-            periodSeconds: 5
+      - name: guestbook
+        image: gcr.io/google-samples/gb-frontend:v5
+        ports:
+        - containerPort: 80
