@@ -6,13 +6,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/내아이디/devops.git
+    repoURL: https://github.com/hldhlsky-cell/-.git
     targetRevision: main
-    path: guestbook/k8s # YAML 적용
-destination:
-  server: https://kubernetes.default.svc
-  namespace: default
-syncPolicy:
-  automated:
-    prune: true # Git에서 지우면 삭제
-    selfHeal: true # 손으로 바꾸면 원복
+    path: guestbook/k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
